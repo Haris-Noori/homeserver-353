@@ -1,6 +1,4 @@
-# mini-bill-system
+# Home Server, Chatting App
 
-Spftware name: Mini Billing Sytem
-
-A web application by: Noori Codez
+A web application based on PHP
 Developer: Haris Noori
