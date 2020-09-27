@@ -1,0 +1,16 @@
+body
+{
+    background: gray;
+}
+
+.dev-image
+{
+    height: 270px;
+    width: 275px;
+}
+
+.img:hover
+{
+    background: greenyellow;
+}
+
