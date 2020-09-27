@@ -9,28 +9,29 @@
     $qry = "SELECT * FROM admins WHERE name = '".$user."' ";
 
     // ----------------------- check if query working
-    if($con->query($qry))
+ 
+   $res = $con->query($qry);
+   if($res)
     {
-        echo "Query run success"; 
+       // echo "Query run success"; 
     }
     else
     {
-        echo "Query didn't run";
+       // echo "Query didn't run";
     }
     //---------------------------------------
 
-    $res = $con->query($qry);
+    //$res = $con->query($qry);
     $msg = "";
 
     if($res->num_rows > 0)
     {   //admin exists
         $row = $res->fetch_assoc();
-
         if($row["pass"] == $pass)
-        {   //password is correct
+        {  
             $_SESSION["id"] = $row["id"];
+	
             $_SESSION["my_user"] = $user;
-            //echo $SESSION["user"];
             header("Location:dashboard.php");  // -->Move next
         }
         else
